@@ -14,7 +14,7 @@ class BooksController < ApplicationController
     
     def create
         book = Book.new(book_params)
-        # @post.user_id= session[:user_id]
+        # book.user_id= session[:user_id]
         book.save
         render json: book
     end
@@ -39,7 +39,7 @@ class BooksController < ApplicationController
     private
 
     def book_params
-        params.require(:book).permit(:title, :author, :status, :date_finished, :notes, :user_id)
+        params.require(:book).permit(:title, :author, :img, :status, :date_finished, :notes, :user_id)
     end
 
     def set_locate

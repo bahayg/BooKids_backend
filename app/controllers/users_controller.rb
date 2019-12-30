@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-    skip_before_action :redirect_user, only:[:new, :create]
+    # skip_before_action :redirect_user, only:[:new, :create]
 
     # def index 
     #     users = User.all
