@@ -11,7 +11,7 @@
 User.create(username: "Pinar", email:"pinar@pinar.com")
 User.create(username: "Yahya", email:"yahya@yahya.com")
 
-books = Book.create ([
+books = Book.create([
     {title: "The Cat in the Hat", author: "Seuss", img: "https://images-na.ssl-images-amazon.com/images/I/51NpGEKBQoL._SX361_BO1,204,203,200_.jpg", status: "Read", date_finished: "08/26/2019", notes: "", user_id: 1},
     {title: "We're Going on A Bear Hunt", author: "Rosen, Michael", img: "https://images-na.ssl-images-amazon.com/images/I/51r454QVsAL._SY440_BO1,204,203,200_.jpg", status: "Read", date_finished: "08/17/2019", notes: "", user_id: 1},
     {title: "If You Give A Mouse A Cookie", author: "Numeroff, Laura Joffe", img: "https://images-na.ssl-images-amazon.com/images/I/51aCFGh8IBL._SX258_BO1,204,203,200_.jpg", status: "Read", date_finished: "10/17/2019", notes: "", user_id: 1},

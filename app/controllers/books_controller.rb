@@ -5,11 +5,11 @@ class BooksController < ApplicationController
     end
 
     def show
-        set_locate
-    end
-
-    def new
-        book = Book.new
+        book = set_locate
+        if book
+            render json: book
+        else 
+            render json: { message: 'No book found with that id' }
     end
     
     def create
@@ -19,21 +19,16 @@ class BooksController < ApplicationController
         render json: book
     end
 
-    def edit
-        set_locate
-    end
-
     def update
-        set_locate
+        book = set_locate
         book.update(book_params)
         render json: book
     end
 
     def destroy
-        data = {message: "Book has been removed from your list"}
-        set_locate
+        book = set_locate
         book.destroy
-        render json: data
+        render json: { message: 'Book has been removed from your list' }
     end
 
     private
@@ -43,7 +38,7 @@ class BooksController < ApplicationController
     end
 
     def set_locate
-        book = Book.find(params[:id])
+       Book.find(params[:id])
     end
 end
 
