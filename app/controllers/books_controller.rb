@@ -10,6 +10,7 @@ class BooksController < ApplicationController
             render json: book
         else 
             render json: { message: 'No book found with that id' }
+        end
     end
     
     def create
@@ -41,8 +42,3 @@ class BooksController < ApplicationController
        Book.find(params[:id])
     end
 end
-
-
-
-
-
