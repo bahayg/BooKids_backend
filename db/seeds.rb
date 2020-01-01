@@ -8,8 +8,7 @@
 
 
 
-User.create(username: "Pinar", email:"pinar@pinar.com")
-User.create(username: "Yahya", email:"yahya@yahya.com")
+User.create(username: "Pinar")
 
 books = Book.create([
     {title: "The Cat in the Hat", author: "Seuss", img: "https://images-na.ssl-images-amazon.com/images/I/51NpGEKBQoL._SX361_BO1,204,203,200_.jpg", status: "Read", date_finished: "08/26/2019", notes: "", user_id: 1},
