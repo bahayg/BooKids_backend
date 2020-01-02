@@ -5,7 +5,7 @@ class BooksController < ApplicationController
     end
 
     def show
-        book = set_locate
+        book = Book.where(user_id: params[:id])
         if book
             render json: book
         else 

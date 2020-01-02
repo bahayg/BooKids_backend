@@ -6,8 +6,14 @@ class UsersController < ApplicationController
         render json: users
     end
     
+    def show
+        user = User.find_by(username: params[:id])
+        # byebug
+        render json: user
+    end
+
     def create
-        user = User.new(params[:username, :email])
+        user = User.new(params.require(:user).permit(:username))
         user.save
         # session[:user_id] = @user.id
         render json: user
@@ -23,7 +29,7 @@ end
 
 # def update
 #     user = User.find(params[:id])
-#     user.update(params[:username, :email])
+#     user.update(params[:username])
 #     render json: user
 # end
 
