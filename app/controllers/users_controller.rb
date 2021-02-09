@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
     # skip_before_action :redirect_user, only:[:new, :create]
+    # validates :username, uniqueness: true
 
     def index 
         users = User.all
@@ -14,9 +15,13 @@ class UsersController < ApplicationController
 
     def create
         user = User.new(params.require(:user).permit(:username))
-        user.save
+        # if user.valid?
+            user.save
         # session[:user_id] = @user.id
-        render json: user
+            render json: user
+        # else
+        #     render json: { error: 'failed to create user' }
+        # end
     end
 
     def destroy
@@ -32,5 +37,3 @@ end
 #     user.update(params[:username])
 #     render json: user
 # end
-
-
