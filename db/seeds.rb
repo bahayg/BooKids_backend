@@ -8,7 +8,7 @@
 
 
 
-User.create(username: "Pinar")
+User.create(username: "Admin")
 
 books = Book.create([
     {title: "The Cat in the Hat", author: "Seuss", img: "https://images-na.ssl-images-amazon.com/images/I/51NpGEKBQoL._SX361_BO1,204,203,200_.jpg", status: "Read", date_finished: "08/26/2019", notes: "", user_id: 1},
@@ -38,5 +38,5 @@ books = Book.create([
     {title: "The Giving Tree", author: "Silverstein, Shel", img: "https://images-na.ssl-images-amazon.com/images/I/41ak9Ds2dWL._SX258_BO1,204,203,200_.jpg", status: "Want to Read", date_finished: "", notes: "", user_id: 1}
     ])
 
-    # {title: "Meraklı Kuzu", author: "Sevde Tuba Okçu", img: "https://productimages.hepsiburada.net/s/29/431/10279286865970.jpg", status: "Want to Read", date_finished: "", notes: "", user_id: 1},
-    # {title: "Llama Llama Red Pajama", author: "Anna Dewdney", img: "https://images-na.ssl-images-amazon.com/images/I/A1hHoK2Uw-L.jpg", status: "Read", date_finished: "March, 2019", notes: "", user_id: 1},
+    {title: "Meraklı Kuzu", author: "Sevde Tuba Okçu", img: "https://productimages.hepsiburada.net/s/29/431/10279286865970.jpg", status: "Want to Read", date_finished: "", notes: "", user_id: 1},
+    {title: "Llama Llama Red Pajama", author: "Anna Dewdney", img: "https://images-na.ssl-images-amazon.com/images/I/A1hHoK2Uw-L.jpg", status: "Read", date_finished: "March, 2019", notes: "", user_id: 1},
